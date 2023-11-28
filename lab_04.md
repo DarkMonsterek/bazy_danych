@@ -94,10 +94,11 @@ insert into przetwory values
 * punkt 1 wstaw 5 wikingów do tabeli postac
 ```sql
 insert into postac values
+(default, 'Bram','wiking', '1690-10-9', 50),
+(default, 'Asgaut','wiking', '1710-11-20', 40),
 (default,'Eyjolf', 'wiking','1702-11-21',38),
 (default,'Galti', 'wiking','1720-11-24',20),
-(default,'Hallstein', 'wiking','1712-11-27',28),
-(default, 'Bram','wiking', '1690-10-9', 50);
+(default,'Hallstein', 'wiking','1712-11-27',28);
 ```
 * punkt 2 stworz tabele statek
 ```sql
