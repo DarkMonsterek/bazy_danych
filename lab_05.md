@@ -90,5 +90,5 @@ create table zwierz(id_postaci int auto_increment primary key, nazwa varchar(40)
 insert into zwierz select id_postaci, nazwa, wiek from postac
 where rodzaj = 'ptak';
 insert into zwierz select  id_postaci, nazwa, wiek from postac
-where rodzaj = 'ptak';
+where rodzaj = 'wąż';
 ```
