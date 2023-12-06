@@ -25,18 +25,15 @@ select * from zasob where month(dataPozyskania) =7 or month(dataPozyskania)=8;
 select * from zasob where rodzaj is not null order by waga asc;
 select * from kreatura where dataUr is not null order by dataUr asc limit 5;
 #zadanie 4
-select distinct(rodzaj) from kreatura;
-select distinct rodzaj from zasob;
-select * from zasob where rodzaj is null;
-select concat(nazwa, ' - ', rodzaj) from kreatura where rodzaj like 'wi%';
-select concat('Ala', 'ma', 'kota') as zdanie;
-select concat(nazwa, 'to id=', idKreatury) from kreatura;
-select concat(nazwa, ' - ', rodzaj) from kreatura where rodzaj like 'wi%';
-select * from zasob;
-select concat(nazwa ,ilosc*waga) from zasob where year(dataPozyskania) between 2000 and 2007;
+#select distinct(rodzaj) from kreatura;
+select distinct rodzaj as 'unikalne rodzaje' from zasob;
+select concat(nazwa, ' - ', rodzaj) as 'nazwa i rodzaj kreatury' from kreatura where rodzaj like 'wi%';
+#select concat('Ala', 'ma', 'kota') as zdanie;
+#select concat(nazwa, 'to id=', idKreatury) from kreatura;
+select *, (ilosc*waga) as 'całkowita waga zasobu' from zasob where year(dataPozyskania) between 2000 and 2007;
 #zadanie 5
-select * from zasob where rodzaj='jedzenie';
-select concat(nazwa, ' netto = ', waga*0.7, ', waga odpadow = ', waga*0.3) from zasob where rodzaj='jedzenie';
+#select * from zasob where rodzaj='jedzenie';
+select nazwa, (waga*ilosc*0.7) as 'waga netto', (waga*ilosc*0.3) as 'waga odpadow' from zasob where rodzaj='jedzenie';
 select * from zasob where rodzaj is null;
-select distinct nazwa,rodzaj from zasob where nazwa like 'Ba%' or nazwa like '%os'order by nazwa;
+select distinct rodzaj, nazwa from zasob where nazwa like 'Ba%' or nazwa like '%os'order by nazwa;
 ```
