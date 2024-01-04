@@ -35,3 +35,16 @@ END
 DELIMITER ;
 ```
 ## Zadanie 3
+```sql
+DELIMITER $$
+CREATE PROCEDURE eliksir_sily(IN id int)
+BEGIN
+Update kreatura set udzwig = 1.2 * udzwig where idKreatury = id;
+END
+$$
+DELIMITER ;
+```
+wywołanie procedury
+```sql
+call eliksir_sily(1);
+```
