@@ -21,9 +21,12 @@ group by Year(z.data_zamowienia)
 order by sum(pz.cena*pz.ilosc) desc;
 ```
 ## Zadanie 4
-```
+```sql
 select sum(pz.ilosc*pz.cena) as 'suma wartosci anulowanych zamowien' from status_zamowienia sz 
 inner join zamowienie z on sz.id_statusu_zamowienia=z.status_zamowienia
 inner join pozycja_zamowienia pz on z.id_zamowienia=pz.zamowienie
 where sz.nazwa_statusu_zamowienia = 'anulowane';
+```
+## Zadanie 5
+```sql
 ```
