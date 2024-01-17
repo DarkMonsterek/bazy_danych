@@ -27,7 +27,9 @@ select round(avg(pensja), 2) as 'srednia pensja' from pracownik;
 ```
 ## Zadanie 7
 ```sql
-
+select round(avg(pensja), 2) from pracownik
+where data_zatrudnienia <= 
+subdate(curdate(), interval 5 year);
 ```
 ## Zadanie 8
 ```sql
