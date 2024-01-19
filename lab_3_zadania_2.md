@@ -29,4 +29,5 @@ where sz.nazwa_statusu_zamowienia = 'anulowane';
 ```
 ## Zadanie 5
 ```sql
+
 ```
